@@ -1,0 +1,62 @@
+{% extends "all_about_a_hart_henrichsen/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>This app is all about Alexander Hart Henrichsen.</h1>
+<div id="earlylife">
+<h2> Early Life</h2>
+<p>Hart was born on October 20th, 1996 in Altus Oklahoma Air Force Base. A year and a half later, he moved with his family to Monteray California. Here he has his first memories, namely, the monteray aquarium, the fish market, and a rabbit named 'poopers' that he watched. After four years, His parents moved to San Angaleo and then San Antonio with the Air force.
+  Shortly before the housing colaspe in 2008, Hart's father, Richard, found a new job in Washington D.C. The family moved to Maryland, where Hart Lived until graduation.
+<br><img src="../../static/all_about_a_hart_henrichsen/images/index.jpeg">
+</p>
+</div>
+<div id="school">
+  <h2>Schooling</h2>
+  <p>Hart attending 5 elementary schools due to his family moving so often. He attended Southern Middle school where he started playing the Oboe. He graduated from Patuxent High School in the top 10% of his class. He was one of the founders of the school's robotics club. He was also served leadership positions in marching band, math club, and programing groups. In 2014 Hart was accepted into Brigham Young University. He completed a year of Education before going on his Mission. He is majoring in Civil and Environmental Engineering and minoring in Mathematics.</p>
+<img src="../../static/all_about_a_hart_henrichsen/images/pax.jpeg">
+</div>
+<div id="Mission">
+  <h2>Mission</h2>
+  <p> Hart served his mission from July 2015 to June 2017. He served in the Belgium/Netherlands Mission for the Church of Jesus Christ of Latter Day Saints. Here he learned Dutch. He served in Spijknesse, Nijmege, Delft, Rotterdam, and Leiden in the Netherlands and Geel in Belgium. He was companions with 11 companions from Utah, Wisconsin, Suriname, Washington, England, New Mexico, and Jamaica. He served as co-district leader, senior-co-district leader, and trainer. 3 converts were baptized while he was serving in their Areas. Two are still active. Hart also helped in the prevention of multiple suicides while serving his mission. He was known by a stake president and a few others as Elder Hart even though his title was officially Elder Henrichsen.
+  <img src="../../static/all_about_a_hart_henrichsen/images/mis.png">
+  </p>
+</div>
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+  <!-- Example Modal -->
+  <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="help-modal-label">Example Modal</h5>
+        </div>
+        <div class="modal-body">
+          <p>You can add custom buttons to the app header using the <code>header_buttons</code> block. Use anchor/link tags for the button and wrap it in a div with the class <code>header-button</code>. For buttons with the gliphyicons, add the <code>glyphicon-button</code> class as well.</p>
+          <p>Ever have trouble using a modal in a Tethys app? Use the <code>after_app_content</code> block for modal content to allow them to function properly. See: <a href="https://getbootstrap.com/javascript/#modals">Bootstrap Modals</a></p>
+          <p>Add tooltips to any element by adding the <code>data-toggle</code>, <code>data-placement</code>, and <code>title</code> attributes to the button. See: <a href="https://getbootstrap.com/javascript/#tooltips">Bootstrap Tooltips</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block app_actions %}
+  {% gizmo save_button %}
+  {% gizmo edit_button %}
+  {% gizmo remove_button %}
+  {% gizmo previous_button %}
+  {% gizmo next_button %}
+{% endblock %}
